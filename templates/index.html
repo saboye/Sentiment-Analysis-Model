@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Review Sentiment Analysis</title>
+    <style>
+        /* CSS styles here */
+        body {
+            background-image: url('/static/background-color.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
+        .container {
+            background: rgb(165, 162, 167);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: auto;
+        }
+
+        .result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none; /* Ensures the result is not displayed initially */
+        }
+
+        .positive {
+            color: green;
+        }
+
+        .negative {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1></h1>
+        <h1>Bellevue University</h1>
+        <h2>Week 5: Classification Models and Clustering </h2>
+        <h3>5.2 Exercise: Build your own Sentiment Analysis Model</h3>
+        <h4>Movie Review Sentiment Analysis App. </h4>
+        <h4>Author: SAMUEL ABOYE.</h4>
+        <p>Enter a review in the text box below and press "Analyze Sentiment" to find out whether the sentiment is
+            positive or negative.</p>
+        <form method="post" id="analysisForm">
+            <textarea name="review" id="review" rows="4" cols="50" required="required">{{ review_text }}</textarea><br>
+            <button type="submit">Analyze Sentiment</button>
+            <button type="button" onclick="clearResult()">Clear</button>
+        </form>
+        <!-- Result display area -->
+        {% if prediction %}
+        <div id="result" class="result {{ 'positive' if prediction == 'Positive' else 'negative' }}">
+            {{ '😊 Positive' if prediction == 'Positive' else '😞 Negative' }}
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        // JavaScript to clear the result
+        function clearResult() {
+            var resultDiv = document.getElementById('result');
+            var reviewTextarea = document.getElementById('review');
+            if (resultDiv) {
+                resultDiv.style.display = 'none'; // Hide the result div
+                resultDiv.innerHTML = ''; // Clear the content of the result div
+            }
+            if (reviewTextarea) {
+                reviewTextarea.value = ''; // Clear the textarea
+            }
+        }
+
+        window.onload = function() {
+            var resultDiv = document.getElementById('result');
+            if (resultDiv && resultDiv.innerHTML.trim() !== '') {
+                resultDiv.style.display = 'block';
+            }
+        };
+    </script>
+</body>
+
+</html>
