@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/github/contributors/saboye/Sentiment-Analysis-Model-?color=green&logo=github&style=for-the-badge" alt="GitHub contributors">
   <img src="https://img.shields.io/github/forks/saboye/Sentiment-Analysis-Model-?logo=github&style=for-the-badge" alt="GitHub forks">
   <img src="https://img.shields.io/github/issues-raw/saboye/Sentiment-Analysis-Model-?style=for-the-badge" alt="GitHub issues">
-  <img src="https://img.shields.io/github/license/saboye/Sentiment-Analysis-Model-?label=license&style=for-the-badge" alt="MIT license">
+  <img src="https://img.shields.io/github/license/saboye/Sentiment-Analysis-Model-?label=license&style=for-the-badge" alt="GitHub license">
   <img src="https://img.shields.io/github/last-commit/saboye/Sentiment-Analysis-Model-?style=for-the-badge" alt="GitHub last commit">
   <img src="https://img.shields.io/badge/Sentiment%20Analysis-brightgreen?style=for-the-badge&logo=ai&logoColor=white" alt="Sentiment Analysis">
   <img src="https://img.shields.io/badge/Framework-Flask-blue?style=for-the-badge&logo=flask" alt="Flask">
