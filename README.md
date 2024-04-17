@@ -54,7 +54,7 @@ Usage
 
 <p align="center">
   <a>
-    <img src="/static/week-5-nlp.gif" alt="Logo" width="400" height="300">
+    <img src="/static/week-5-nlp.gif" alt="Logo" width="900" height="400">
   </a>
 
 License
